@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Input Text</title>
+</head>
+<body>
+    <h1>How to add Paragrap from Input field</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro enim, nisi sint recusandae expedita rerum consequatur quod amet quos impedit facere doloribus in quibusdam corporis a maxime similique, repellat aut.</p>
+        <p>Dignissimos voluptas ipsa quaerat asperiores repellat tenetur facere est incidunt. Eum magnam quidem veritatis eius in dolor distinctio ratione tempora aperiam. Pariatur ab totam non magni cupiditate, veritatis quod labore.</p>
+        <p>Ad ab illo deleniti cum aliquam corporis pariatur, explicabo officia quidem fugit, vel est repudiandae culpa perspiciatis molestiae sequi distinctio id veritatis error quasi sunt? Saepe praesentium vero officiis vel?</p>
+    </div>
+
+    <br>
+    <textarea name="" id="text-area" cols="60" rows="10"></textarea>
+    <button id="btn-update">Update</button>
+    <script>
+
+    document.getElementById('btn-update').addEventListener('click', function(){
+        const input = document.getElementById('text-area');
+        const inputText = input.value;
+        const commentContainer = document.getElementById('comment-container');
+        const p =document.createElement('p');
+        p.innerText = inputText;
+        commentContainer.appendChild(p);
+        input.value='';
+
+
+        
+    })
+
+
+    </script>
+</body>
+</html>

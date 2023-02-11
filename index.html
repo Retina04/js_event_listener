@@ -12,7 +12,11 @@
 <button onclick="console.log(7)">Give Value</button>
 <br>
 <button onclick="document.body.style.backgroundColor ='yellow'">Make Yellow</button>
-
+<button id="make-blue">blue</button>
+<button id="make-Purple">Make-Purple</button>
+<button id="make-green">Make-green</button>
+<button id="make-skyblue">Make-skyblue</button>
+<button id="make-lavendar">make-lavendar</button>
 
 
     <script src="js/event.js"></script>
@@ -21,6 +25,25 @@
             document.body.style.background ='red';
 
         }
+        const makeBlue = document.getElementById('make-blue');
+        makeBlue.onclick =makeBluee;
+
+        function makeBluee(){
+            document.body.style.background='blue';
+        }
+        const makepur = document.getElementById('make-Purple')
+        makepur.onclick =function makePurPle(){
+            document.body.style.background='purple';
+
+        }
+        const greenButton = document.getElementById('make-green');
+        greenButton.addEventListener('click' ,makeGreen)
+        function makeGreen(){
+            document.body.style.background='green';
+        }
+        document.getElementById('make-lavendar').addEventListener('click',function(){
+            document.body.style.background = 'pink';
+        })
     </script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Text Change</title>
+</head>
+<body>
+    <h3 id="default-text">Default text</h3>
+    <button onclick="OnClickTextChange()">Click Me</button>
+    <button id="On_ClickTextChange"> Click Me</button>
+    <br>
+    <br>
+    <br>
+    <p id="para">Paragrap default text</p>
+    <input type="text" name="" id="input-field">
+    <button id="update">Update</button>
+    <script>
+        function OnClickTextChange(){
+            const changeText =document.getElementById('default-text');
+            changeText.innerText='change Text';
+        }
+        document.getElementById('On_ClickTextChange').addEventListener('click',function(){
+            const eventListener = document.getElementById('default-text');
+            eventListener.innerText ='Hello';
+        })
+        document.getElementById('update').addEventListener('click',function(){
+            const inputField = document.getElementById('input-field')
+            const input = inputField.value;
+            const p = document.getElementById('para');
+            p.innerText=input;
+            inputField.value='';
+        })
+    </script>
+</body>
+</html>
